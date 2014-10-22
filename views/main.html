@@ -1,0 +1,28 @@
+<div class="jumbotron">
+  <h1>Clock</h1>
+  <p class="lead">
+    Time is something you can only give away.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#/tick" ng-click="start()">Start!</a></p>
+  <p>P.S: Mobile devices need to play this file first: <audio controls="" src="coin.mp3" preload="true"></audio></p>
+
+</div>
+
+
+<div class="row">
+    <div class="col-md-8 col-md-push-2">
+        <button type="button" class="btn btn-default btn-block btn-lg well" ng-click="add('developer', price)">Developer</button>
+        <div class="input-group">
+            <span class="input-group-addon">Est. $/hr</span>
+            <input type="number" class="form-control" ng-model="price">
+            <span class="input-group-addon">.00</span>
+        </div>
+
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="item in developers">
+                <a class="badge" ng-click="remove($item)"><span class="glyphicon glyphicon-remove"></span></a>
+                Developers!
+            </li>
+        </ul>
+    </div>
+</div>
